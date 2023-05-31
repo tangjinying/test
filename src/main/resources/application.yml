@@ -1,0 +1,47 @@
+spring:
+
+  main:
+    allow-circular-references: true
+  #  redis:
+  #    host: 43.143.84.149
+  #    password: 123456
+  #    port: 7002
+  #    timeout: 10000
+
+  redis:
+    cluster:
+      nodes:
+        - 43.143.84.149:7001
+        - 43.143.84.149:7002
+        - 43.143.84.149:7003
+        - 43.143.84.149:7004
+        - 43.143.84.149:7005
+        - 43.143.84.149:7006
+    password: 123456
+    timeout: 1000000
+
+    jedis:
+      pool:
+        min-idle: 2
+        max-active: 8
+        max-wait: 1000
+        max-idle: 4
+
+
+#  rabbitmq:
+#    #    host: 43.143.84.149
+#    #    port: 5672
+#    username: admin
+#    password: admin
+#    #    virtualHost: /kavito
+#    #    publisher-confirms: true
+#    template:
+#      retry:
+#        enabled: true
+#        initial-interval: 10000ms
+#        max-interval: 300000ms
+#        multiplier: 2
+#      exchange: topic.exchange
+#    addresses: 43.143.84.149:5673,43.143.84.149:5674,43.143.84.149:5675
+
+
