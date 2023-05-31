@@ -2,7 +2,7 @@ FROM java:11
 
 MAINTAINER tjy
 
-ADD test-1.0-SNAPSHOT.jar test111.jar
+ADD test111.jar test111.jar
 
 EXPOSE 8080
 
